@@ -1,0 +1,89 @@
+======================================================================
+2. SCHERMATA PRINCIPALE
+======================================================================
+
+La schermata principale permette di accedere alle principali
+funzioni del gestionale.
+
+Le sezioni principali riguardano:
+
+    - Tavoli
+    - Ordini
+    - Menu
+    - Prenotazioni
+    - Conti
+    - Scontrini
+    - Storico
+
+
+======================================================================
+2.1 GESTIONE DEI TAVOLI
+======================================================================
+
+La sezione Tavoli permette di visualizzare la situazione dei tavoli.
+
+Per ogni tavolo è possibile visualizzare il relativo stato.
+
+Lo stato permette di capire rapidamente se un tavolo è:
+
+    - libero
+    - occupato
+    - associato a un ordine
+    - interessato da una prenotazione
+
+
+----------------------------------------------------------------------
+APRIRE UN ORDINE DA UN TAVOLO
+----------------------------------------------------------------------
+
+1. Aprire la sezione Tavoli.
+2. Selezionare il tavolo desiderato.
+3. Creare un nuovo ordine oppure aprire l'ordine esistente.
+4. Inserire il numero di persone.
+5. Procedere con l'inserimento della comanda.
+
+
+======================================================================
+2.2 PRENOTAZIONI
+======================================================================
+
+La sezione Prenotazioni permette di gestire le prenotazioni
+dei clienti.
+
+Una prenotazione può essere associata a uno o più tavoli.
+
+======================================================================
+2.3 MENU
+======================================================================
+
+Il menu contiene gli elementi che possono essere ordinati.
+
+Gli elementi possono essere:
+
+    - piatti
+    - bevande
+
+Per ogni elemento possono essere visualizzate informazioni come:
+
+    - nome
+    - descrizione
+    - prezzo
+    - categoria
+    - allergeni
+    - disponibilità
+
+
+======================================================================
+2.4 CREAZIONE DI UN ORDINE
+======================================================================
+
+Per creare un nuovo ordine:
+
+1. Selezionare un tavolo.
+2. Indicare il numero di persone.
+3. Aprire la schermata dell'ordine.
+4. Selezionare gli elementi desiderati.
+5. Indicare le quantità.
+6. Se necessario, aggiungere una nota.
+7. Selezionare il momento del servizio.
+8. Confermare l'ordine.

@@ -1,0 +1,77 @@
+======================================================================
+                    GESTIONALE RISTORANTE
+                  GUIDA ALL'UTILIZZO
+======================================================================
+
+Versione: 1.0
+
+Questa guida spiega come utilizzare il gestionale per la gestione
+quotidiana del ristorante.
+
+La guida è rivolta al personale che utilizza il gestionale e non
+richiede conoscenze informatiche.
+
+======================================================================
+1.1 REGOLA GENERALE
+======================================================================
+
+Prima di confermare un'operazione importante verificare sempre
+i dati visualizzati.
+
+In particolare:
+
+    TAVOLO
+    NUMERO PERSONE
+    COMANDA
+    QUANTITÀ
+    NOTE
+    TOTALE
+    SCONTO
+    SCONTRINO
+
+
+Una volta confermata un'operazione, alcune modifiche potrebbero
+richiedere procedure specifiche.
+
+======================================================================
+1.2 BUONE PRATICHE DI UTILIZZO
+======================================================================
+
+Per evitare errori:
+
+1. Controllare sempre il tavolo prima di aprire un ordine.
+
+2. Controllare il numero di persone.
+
+3. Inserire quantità corrette.
+
+4. Utilizzare le note solamente quando necessarie.
+
+5. Selezionare correttamente il momento del servizio.
+
+6. Controllare la comanda prima di confermarla.
+
+7. Controllare il conto prima del pagamento.
+
+8. Controllare lo scontrino dopo l'emissione.
+
+9. Non effettuare storni senza aver verificato lo scontrino.
+
+10. In caso di errore, non creare un secondo ordine per correggere
+    il problema senza prima verificare lo stato del primo ordine.
+
+
+======================================================================
+1.3 QUANDO CONTATTARE IL RESPONSABILE
+======================================================================
+
+Contattare il responsabile quando:
+
+    - non è possibile accedere;
+    - un tavolo risulta occupato erroneamente;
+    - un ordine non può essere modificato;
+    - il totale sembra errato;
+    - uno scontrino non risulta nello storico;
+    - una stampa non viene generata;
+    - è necessario effettuare uno storno;
+    - si verifica un errore ripetuto del sistema.

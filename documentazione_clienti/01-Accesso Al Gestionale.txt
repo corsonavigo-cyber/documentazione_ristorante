@@ -1,0 +1,28 @@
+======================================================================
+1. ACCESSO AL GESTIONALE
+======================================================================
+
+Per utilizzare il gestionale è necessario effettuare l'accesso.
+
+Inserire:
+
+    - nome utente
+    - password
+
+e confermare l'accesso.
+
+Se i dati sono corretti viene visualizzata la schermata principale.
+
+
+----------------------------------------------------------------------
+PROBLEMA: NON RIESCO AD ACCEDERE
+----------------------------------------------------------------------
+
+Controllare:
+
+1. che il nome utente sia corretto;
+2. che la password sia corretta;
+3. che non siano presenti spazi aggiuntivi;
+4. che il sistema sia raggiungibile.
+
+Se il problema continua, contattare il responsabile.

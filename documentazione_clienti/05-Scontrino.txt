@@ -1,0 +1,120 @@
+======================================================================
+5. SCONTRINO
+======================================================================
+
+Lo scontrino contiene il riepilogo della vendita.
+
+Il sistema conserva i dati relativi allo scontrino, inclusi
+i valori utilizzati al momento della vendita.
+
+Questo permette di mantenere corretti i dati storici anche se
+successivamente cambiano i prezzi del menu.
+
+
+======================================================================
+5.1 STAMPA DELLO SCONTRINO
+======================================================================
+
+Dopo l'emissione dello scontrino viene generata la relativa stampa.
+
+La stampa contiene le informazioni della vendita e il relativo
+riepilogo fiscale.
+
+
+----------------------------------------------------------------------
+PROBLEMA: LO SCONTRINO NON VIENE STAMPATO
+----------------------------------------------------------------------
+
+Controllare:
+
+1. che la vendita sia stata effettivamente conclusa;
+2. che lo scontrino sia presente nello storico;
+3. che la stampante sia accesa;
+4. che la stampante sia collegata;
+5. che il sistema di stampa sia attivo.
+
+Se lo scontrino risulta presente nello storico ma la stampa
+non è disponibile, utilizzare la funzione di ristampa,
+se disponibile.
+
+
+======================================================================
+5.2 RISTAMPA DI UNO SCONTRINO
+======================================================================
+
+Gli scontrini precedentemente emessi possono essere consultati
+nello storico.
+
+Per visualizzare uno scontrino:
+
+1. Aprire lo Storico.
+2. Cercare lo scontrino desiderato.
+3. Selezionarlo.
+4. Visualizzare il dettaglio.
+5. Utilizzare la funzione di ristampa, quando disponibile.
+
+
+======================================================================
+5.3 STORICO DEGLI SCONTRINI
+======================================================================
+
+Lo storico permette di consultare gli scontrini precedentemente
+emessi.
+
+Per ogni scontrino è possibile visualizzare informazioni come:
+
+    - numero dello scontrino
+    - ordine associato
+    - data e ora
+    - totale
+    - dettaglio degli elementi
+
+
+Lo storico è utile per:
+
+    - controllare una vendita precedente;
+    - verificare un totale;
+    - visualizzare un dettaglio;
+    - effettuare una ristampa.
+
+
+======================================================================
+5.4 STORNO
+======================================================================
+
+Lo storno deve essere utilizzato quando è necessario annullare
+una vendita secondo le procedure previste.
+
+Prima di effettuare uno storno verificare attentamente
+lo scontrino interessato.
+
+
+----------------------------------------------------------------------
+ATTENZIONE
+----------------------------------------------------------------------
+
+Uno storno è un'operazione importante.
+
+Non effettuare uno storno se non si è certi dello scontrino
+da annullare.
+
+
+======================================================================
+5.6 ANNULLAMENTO
+======================================================================
+
+Quando viene effettuato un annullamento, il sistema genera
+una stampa che identifica esplicitamente l'operazione
+come annullata.
+
+
+======================================================================
+5.6 ALLERGENI
+======================================================================
+
+Gli allergeni associati agli elementi del menu possono essere
+visualizzati nella scheda dell'elemento.
+
+Prima di comunicare informazioni sugli allergeni a un cliente,
+controllare sempre le informazioni presenti nel gestionale
+e seguire le procedure interne del ristorante.

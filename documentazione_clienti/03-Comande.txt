@@ -1,0 +1,194 @@
+======================================================================
+3. CREAZIONE DI UN ORDINE
+======================================================================
+
+Per creare un nuovo ordine:
+
+1. Selezionare un tavolo.
+2. Indicare il numero di persone.
+3. Aprire la schermata dell'ordine.
+4. Selezionare gli elementi desiderati.
+5. Indicare le quantità.
+6. Se necessario, aggiungere una nota.
+7. Selezionare il momento del servizio.
+8. Confermare l'ordine.
+
+
+======================================================================
+3.1 INSERIMENTO DEGLI ELEMENTI NELLA COMANDA
+======================================================================
+
+Quando si seleziona un piatto o una bevanda, l'elemento viene
+aggiunto alla comanda.
+
+È possibile modificare:
+
+    - quantità
+    - momento del servizio
+    - note
+
+
+----------------------------------------------------------------------
+QUANTITÀ
+----------------------------------------------------------------------
+
+La quantità indica quante unità dello stesso elemento devono
+essere ordinate.
+
+Esempio:
+
+    Pizza Margherita
+    Quantità: 2
+
+
+----------------------------------------------------------------------
+NOTE
+----------------------------------------------------------------------
+
+Le note permettono di comunicare richieste particolari relative
+all'elemento.
+
+Esempi:
+
+    senza cipolla
+    poco sale
+    cottura particolare
+
+
+Utilizzare le note solamente quando necessario e inserirle
+in modo chiaro.
+
+
+======================================================================
+3.2 MOMENTI DEL SERVIZIO
+======================================================================
+
+Gli elementi della comanda possono essere organizzati in base
+al momento in cui devono essere serviti.
+
+I momenti disponibili sono:
+
+    1. Antipasto
+    2. Primo
+    3. Secondo
+    4. Dolci
+    5. Da evadere subito
+
+
+Esempio:
+
+    Antipasto
+        Bruschetta x 2
+
+    Primo
+        Carbonara x 2
+
+    Secondo
+        Tagliata x 1
+
+    Dolci
+        Tiramisù x 2
+
+
+Utilizzare il momento corretto per facilitare il lavoro
+della cucina e del bar.
+
+
+======================================================================
+3.2 MODIFICARE UN ORDINE
+======================================================================
+
+È possibile modificare un ordine già inserito.
+
+Le modifiche possono riguardare:
+
+    - quantità
+    - elementi
+    - note
+    - momento del servizio
+
+
+Dopo aver modificato la comanda, confermare le modifiche.
+
+
+----------------------------------------------------------------------
+ATTENZIONE
+----------------------------------------------------------------------
+
+Una modifica alla comanda può comportare una nuova stampa
+per la cucina o per il bar.
+
+Controllare quindi che la modifica inserita sia corretta
+prima di confermarla.
+
+
+======================================================================
+3.3 VISUALIZZAZIONE DELLA COMANDA
+======================================================================
+
+La comanda mostra gli elementi ordinati organizzati
+per momento del servizio.
+
+Per ogni elemento vengono visualizzati, quando previsti:
+
+    - nome
+    - quantità
+    - nota
+    - momento
+    - prezzo
+
+
+Il totale della comanda viene aggiornato in base agli elementi
+presenti.
+
+
+======================================================================
+3.4 PRECONTO / PRECOMANDA
+======================================================================
+
+Prima della chiusura del conto è possibile visualizzare
+il riepilogo dell'ordine.
+
+Il riepilogo permette di controllare:
+
+    - elementi ordinati
+    - quantità
+    - prezzi
+    - totale
+
+
+Prima del pagamento verificare sempre che il riepilogo
+corrisponda a quanto effettivamente consumato.
+
+
+======================================================================
+3.5 SCONTO
+======================================================================
+
+Quando previsto, è possibile applicare uno sconto al totale.
+
+Prima di confermare lo sconto verificare:
+
+    - valore dello sconto
+    - totale finale
+
+Il totale mostrato deve essere controllato prima della chiusura
+del conto.
+
+
+======================================================================
+3.6 CHIUSURA DEL CONTO
+======================================================================
+
+Per chiudere un conto:
+
+1. Aprire l'ordine.
+2. Controllare gli elementi.
+3. Controllare quantità e prezzi.
+4. Controllare eventuali sconti.
+5. Controllare il totale.
+6. Procedere con il pagamento.
+7. Confermare la chiusura.
+
+
+Dopo la chiusura viene emesso lo scontrino.
