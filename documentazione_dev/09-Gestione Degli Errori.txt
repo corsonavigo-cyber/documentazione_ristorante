@@ -1,0 +1,34 @@
+======================================================================
+9. GESTIONE DEGLI ERRORI
+======================================================================
+
+Gli errori devono essere gestiti a più livelli.
+
+FRONTEND
+--------
+
+Gestire:
+
+- errori HTTP
+- risposte non valide
+- errori di rete
+- errori di parsing JSON
+
+
+BACKEND
+-------
+
+Gestire:
+
+- eccezioni PDO
+- dati non validi
+- risorse inesistenti
+- errori durante transazioni
+
+
+DATABASE
+--------
+
+Le operazioni critiche devono essere protette
+da transazioni.
+

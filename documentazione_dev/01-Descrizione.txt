@@ -1,0 +1,41 @@
+======================================================================
+                 GESTIONALE RISTORANTE
+                 DOCUMENTAZIONE TECNICA
+======================================================================
+
+Versione: 1.0
+Tecnologie: PHP, MariaDB, JavaScript, HTML, CSS
+Architettura: API REST + Repository/Service + Frontend modulare
+
+
+======================================================================
+1. DESCRIZIONE DEL PROGETTO
+======================================================================
+
+Il progetto è un gestionale web per la gestione operativa di un
+ristorante.
+
+Il sistema permette di gestire:
+
+- tavoli
+- prenotazioni
+- menu
+- piatti
+- bevande
+- allergeni
+- momenti del servizio
+- ordini
+- comande
+- stato degli ordini
+- conti
+- scontrini
+- IVA
+- stampa di comande e scontrini
+
+L'applicazione è organizzata separando:
+
+- frontend
+- API
+- logica applicativa
+- accesso al database
+- gestione della stampa

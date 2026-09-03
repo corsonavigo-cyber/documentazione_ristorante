@@ -1,0 +1,23 @@
+======================================================================
+10. PATTERN ARCHITETTURALI
+======================================================================
+
+REPOSITORY PATTERN
+------------------
+
+Utilizzato per separare l'accesso al database dalla logica
+applicativa.
+
+SERVICE LAYER
+-------------
+
+Utilizzato per concentrare la logica applicativa e coordinare
+più operazioni del Repository.
+
+MODULE PATTERN
+--------------
+
+Utilizzato nel frontend JavaScript tramite ES Modules.
+
+Questo permette di separare le responsabilità e ridurre
+le dipendenze globali.

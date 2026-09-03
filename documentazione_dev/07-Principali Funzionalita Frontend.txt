@@ -1,0 +1,352 @@
+======================================================================
+7      FRONTEND
+======================================================================
+
+
+======================================================================
+7.1 GESTIONE DELLO STATO 
+======================================================================
+
+Il frontend mantiene lo stato corrente dell'ordine.
+
+La struttura utilizzata comprende informazioni come:
+
+    state = {
+        comanda: [],
+        items: [],
+        momenti: [],
+        tavoliInUso: [],
+        momentoAttivo: 1,
+        idOrdineInserito: null,
+        confirmGiaChiesto: false
+    }
+
+
+La chiave utilizzata per LocalStorage è:
+
+    id_ordine
+
+
+Il LocalStorage viene utilizzato per mantenere lo stato
+temporaneo della lavorazione dell'ordine.
+
+
+======================================================================
+7.2 AGGIORNAMENTO DELLA COMANDA
+======================================================================
+
+L'aggiornamento della comanda viene effettuato inviando
+la nuova comanda al backend.
+
+Il frontend non deve essere considerato come livello di sicurezza.
+
+Il backend riceve la nuova comanda e sostituisce le relazioni
+precedenti.
+
+
+Flusso:
+
+    FRONTEND
+       |
+       | PUT /api/ordini.php?type=comanda
+       |
+       v
+    SERVICE
+       |
+       v
+    TRANSAZIONE
+       |
+       +--> aggiorna ordine
+       |
+       +--> elimina vecchie relazioni
+       |
+       +--> inserisce nuove relazioni
+       |
+       +--> COMMIT
+
+
+In caso di errore:
+
+       |
+       v
+    ROLLBACK
+
+
+Questo garantisce che l'aggiornamento non rimanga in uno stato
+parzialmente applicato.
+
+
+======================================================================
+7.3 TRANSAZIONI
+======================================================================
+
+Le operazioni che modificano più tabelle devono essere eseguite
+all'interno di una transazione.
+
+Schema:
+
+    BEGIN
+       |
+       +--> operazione 1
+       |
+       +--> operazione 2
+       |
+       +--> operazione 3
+       |
+       v
+    COMMIT
+
+
+In caso di eccezione:
+
+    BEGIN
+       |
+       +--> operazione 1
+       |
+       +--> operazione 2
+       |
+       X--> errore
+       |
+       v
+    ROLLBACK
+
+
+Questo approccio evita dati incoerenti.
+
+
+======================================================================
+7.4 STATO DEGLI ORDINI
+======================================================================
+
+Gli ordini possono attraversare differenti stati.
+
+Lo stato viene gestito tramite una relazione dedicata.
+
+Il frontend utilizza lo stato per determinare:
+
+- visualizzazione
+- possibilità di modifica
+- evasione
+- chiusura
+- gestione del conto
+
+
+======================================================================
+7.5 STAMPA DELLE COMANDE
+======================================================================
+
+La stampa delle comande viene gestita dal componente StampaService.
+
+La comanda viene separata in:
+
+    CUCINA
+    BAR
+
+
+Gli elementi vengono quindi inviati al rispettivo output di stampa.
+
+
+Il metodo principale utilizzato per la generazione è:
+
+    generaComandaTxt()
+
+
+Il metodo supporta anche la gestione delle modifiche alla comanda.
+
+
+======================================================================
+7.6 SCONTRINI
+======================================================================
+
+Gli scontrini vengono gestiti tramite:
+
+    scontrino_emesso
+
+e le relative informazioni di dettaglio.
+
+
+Lo scontrino contiene informazioni come:
+
+    id_scontrino
+    id_ordine
+    data_e_ora_pagamento
+    totale
+
+
+Il dettaglio contiene invece le singole voci dello scontrino.
+
+
+Questa separazione permette di mantenere:
+
+    SCONTRINO
+        |
+        +--> voce 1
+        +--> voce 2
+        +--> voce 3
+        +--> ...
+
+
+======================================================================
+7.7 STORICIZZAZIONE DEI PREZZI
+======================================================================
+
+Per gli scontrini viene utilizzato il prezzo storico dell'elemento.
+
+Questo è importante perché il prezzo presente nel menu può cambiare
+dopo l'emissione dello scontrino.
+
+Lo scontrino deve invece mantenere il valore utilizzato
+al momento della vendita.
+
+Vengono quindi utilizzati valori come:
+
+    prezzo_unitario_storico
+    aliquota_iva_storica
+
+
+======================================================================
+7.8 CALCOLO IVA
+======================================================================
+
+L'IVA dello scontrino viene calcolata utilizzando:
+
+    prezzo_unitario_storico
+    aliquota_iva_storica
+    quantità
+
+
+L'IVA viene calcolata per ogni voce e successivamente aggregata.
+
+Il sistema espone inoltre un endpoint dedicato al recupero
+delle aliquote IVA storiche:
+
+    /api/scontrino.php?type=iva
+
+
+======================================================================
+7.9 STAMPA DELLO SCONTRINO
+======================================================================
+
+La generazione dello scontrino viene gestita tramite:
+
+    generaScontrinoTxt()
+
+
+I dati vengono recuperati dal database e passati
+al formatter dello scontrino.
+
+Il metodo principale di formattazione è:
+
+    formattaScontrino()
+
+
+La formattazione può gestire:
+
+    scontrino normale
+    ristampa
+    storno
+    annullamento
+
+
+======================================================================
+7.10 STORNI E ANNULLAMENTI
+======================================================================
+
+Gli storni vengono distinti dalla normale emissione.
+
+Il valore:
+
+    active = 0
+
+viene utilizzato nel caso dello storno/cancellazione.
+
+L'annullamento deve comunque generare una stampa che riporti
+esplicitamente lo stato di annullamento.
+
+
+La stampa non deve quindi essere omessa semplicemente perché
+l'elemento non è più attivo.
+
+
+======================================================================
+7.11 FRONTEND JAVASCRIPT
+======================================================================
+
+Il frontend è suddiviso in moduli JavaScript con responsabilità
+specifiche.
+
+Tra i moduli principali:
+
+    apigeneric.js
+    apitavoli.js
+    items.js
+    comanda.js
+    momenti.js
+    localstorage.js
+    tavoli-ordine.js
+    ordine.js
+    menuattivo.js
+    visualizzaordine.js
+    dragdrop.js
+    variabilistato.js
+
+======================================================================
+7.12 RENDERING DELLA COMANDA
+======================================================================
+
+Il rendering della comanda viene effettuato a partire dallo stato
+frontend.
+
+Funzioni principali:
+
+    aggiornaVoceComanda()
+    trovaVoce()
+    eliminaVoce()
+    renderVoce()
+    disegnaPreComanda()
+    totaleComanda()
+
+
+Il rendering raggruppa gli elementi per momento del servizio.
+
+
+======================================================================
+7.13 GESTIONE QUANTITA' E NOTE
+======================================================================
+
+La quantità e la nota vengono gestite direttamente
+sulle voci della comanda.
+
+La logica frontend permette di:
+
+- modificare quantità
+- inserire note
+- aggiornare la voce
+- ricalcolare il totale
+- salvare lo stato
+
+
+La nota non deve generare necessariamente una nuova voce
+se la logica applicativa richiede l'aggregazione dell'elemento.
+
+
+======================================================================
+7.14 GESTIONE DEL CONTO
+======================================================================
+
+Il conto rappresenta la fase finale dell'ordine.
+
+Le informazioni utilizzate per il conto comprendono:
+
+- elementi ordinati
+- quantità
+- prezzi
+- sconti
+- IVA
+- totale
+
+
+Il frontend può gestire lo sconto applicato al totale della
+precomanda, mentre i dati definitivi devono essere consolidati
+dal backend.
+

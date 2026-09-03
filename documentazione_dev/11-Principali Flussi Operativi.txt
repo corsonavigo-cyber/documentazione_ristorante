@@ -1,0 +1,77 @@
+======================================================================
+11. PRINCIPALI FLUSSI OPERATIVI
+======================================================================
+
+APERTURA ORDINE
+---------------
+
+    selezione tavolo
+          |
+          v
+    creazione ordine
+          |
+          v
+    associazione tavolo
+          |
+          v
+    inserimento comanda
+          |
+          v
+    invio cucina/bar
+
+
+MODIFICA ORDINE
+---------------
+
+    caricamento ordine
+          |
+          v
+    modifica comanda
+          |
+          v
+    PUT API
+          |
+          v
+    transazione DB
+          |
+          v
+    nuova comanda
+          |
+          v
+    nuova stampa
+
+
+CHIUSURA CONTO
+--------------
+
+    ordine
+      |
+      v
+    calcolo totale
+      |
+      v
+    calcolo IVA
+      |
+      v
+    pagamento
+      |
+      v
+    emissione scontrino
+      |
+      v
+    generazione stampa
+
+
+STORNO
+------
+
+    scontrino
+       |
+       v
+    richiesta storno
+       |
+       v
+    aggiornamento stato
+       |
+       v
+    generazione stampa storno

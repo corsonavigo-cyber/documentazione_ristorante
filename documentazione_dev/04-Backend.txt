@@ -1,0 +1,71 @@
+======================================================================
+4. BACKEND
+======================================================================
+
+Il backend è organizzato principalmente in:
+
+- API
+- Service
+- Repository
+- configurazione
+- gestione database
+- gestione stampa
+
+
+----------------------------------------------------------------------
+4.1 DATABASE
+----------------------------------------------------------------------
+
+La connessione al database viene gestita tramite PDO.
+
+La configurazione viene mantenuta tramite variabili d'ambiente
+contenute nel file:
+
+    .env
+
+Le credenziali del database non devono essere inserite direttamente
+nel codice sorgente.
+
+La connessione viene centralizzata attraverso la classe Database.
+
+
+----------------------------------------------------------------------
+4.2 REPOSITORY
+----------------------------------------------------------------------
+
+I Repository hanno il compito di gestire l'accesso ai dati.
+
+Le responsabilità principali sono:
+
+- SELECT
+- INSERT
+- UPDATE
+- DELETE
+- gestione delle relazioni
+- transazioni
+
+Il Repository non dovrebbe contenere la logica relativa
+all'interfaccia utente.
+
+
+----------------------------------------------------------------------
+4.3 SERVICE
+----------------------------------------------------------------------
+
+I Service contengono la logica applicativa.
+
+Sono responsabili di coordinare più operazioni del Repository
+quando una funzionalità richiede più passaggi.
+
+Esempio:
+
+    aggiornamento di una comanda
+
+        |
+        +--> aggiornamento ordine
+        |
+        +--> eliminazione vecchie relazioni
+        |
+        +--> inserimento nuove relazioni
+        |
+        +--> commit

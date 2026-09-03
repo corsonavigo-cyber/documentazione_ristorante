@@ -1,0 +1,24 @@
+======================================================================
+12. MANUTENIBILITA'
+======================================================================
+
+Il codice deve mantenere una separazione chiara delle responsabilità.
+
+Evitare:
+
+- query SQL direttamente nel frontend
+- logica applicativa nelle API
+- duplicazione delle query
+- manipolazione diretta del database dal frontend
+- dipendenze circolari tra moduli JS
+- variabili globali non necessarie
+
+
+Preferire:
+
+- funzioni con responsabilità singola
+- Repository riutilizzabili
+- Service per operazioni complesse
+- moduli JS indipendenti
+- funzioni API centralizzate
+- transazioni per operazioni atomiche

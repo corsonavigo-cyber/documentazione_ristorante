@@ -1,0 +1,30 @@
+======================================================================
+3. STRUTTURA LOGICA DELL'APPLICAZIONE
+======================================================================
+
+Il flusso generale dell'applicazione è:
+
+    FRONTEND
+       |
+       | HTTP / Fetch
+       v
+    API PHP
+       |
+       v
+    SERVICE
+       |
+       v
+    REPOSITORY
+       |
+       v
+    DATABASE
+
+
+Il frontend non accede direttamente al database.
+
+Le richieste vengono inviate alle API PHP.
+
+Le API delegano la logica applicativa ai Service.
+
+I Service utilizzano i Repository per eseguire le operazioni
+sul database.

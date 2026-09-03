@@ -1,0 +1,86 @@
+======================================================================
+13. PRINCIPIO GENERALE DEL PROGETTO
+======================================================================
+
+Il principio architetturale principale è:
+
+    PRESENTAZIONE
+          |
+          v
+        API
+          |
+          v
+      BUSINESS LOGIC
+          |
+          v
+       REPOSITORY
+          |
+          v
+       DATABASE
+
+
+Ogni livello deve avere una responsabilità specifica.
+
+Il frontend gestisce principalmente:
+
+    interfaccia
+    stato temporaneo
+    interazione utente
+    rendering
+
+
+Le API gestiscono:
+
+    HTTP
+    input/output
+    validazione iniziale
+
+
+I Service gestiscono:
+
+    logica applicativa
+    orchestrazione
+    transazioni
+
+
+I Repository gestiscono:
+
+    persistenza
+    query
+    relazioni database
+
+
+Il database gestisce:
+
+    persistenza dei dati
+    vincoli
+    integrità referenziale
+
+
+======================================================================
+13.1 PRINCIPI DI SVILUPPO
+======================================================================
+
+1. Il client non è una fonte attendibile.
+
+2. La validazione definitiva deve essere eseguita dal backend.
+
+3. Le operazioni multi-step devono utilizzare transazioni.
+
+4. I dati storici degli scontrini devono essere indipendenti
+   dai successivi cambiamenti del menu.
+
+5. Le responsabilità devono essere separate tra API,
+   Service e Repository.
+
+6. Le chiamate frontend devono essere centralizzate
+   quando possibile.
+
+7. Gli errori devono essere gestiti esplicitamente.
+
+8. Le query devono utilizzare prepared statements.
+
+9. Le credenziali non devono essere presenti nel codice sorgente.
+
+10. Il codice deve privilegiare manutenibilità e prevedibilità
+    rispetto a soluzioni rapide.

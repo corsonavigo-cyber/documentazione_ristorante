@@ -1,0 +1,28 @@
+======================================================================
+8. SICUREZZA
+======================================================================
+
+Le query al database devono utilizzare prepared statements PDO.
+
+Non devono essere concatenate direttamente variabili provenienti
+dalle richieste HTTP nelle query SQL.
+
+Le credenziali devono essere mantenute nel file:
+
+    .env
+
+Il file .env non deve essere pubblicato nel repository Git.
+
+
+Il backend deve validare sempre:
+
+- ID
+- tipi di dato
+- quantità
+- array ricevuti
+- valori obbligatori
+- autorizzazioni
+
+
+La validazione frontend è utile per l'esperienza utente,
+ma non sostituisce la validazione backend.

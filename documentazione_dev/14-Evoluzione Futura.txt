@@ -1,0 +1,36 @@
+======================================================================
+35. EVOLUZIONE FUTURA
+======================================================================
+
+Una possibile evoluzione del progetto consiste nella migrazione
+verso una seconda versione basata su:
+
+    React
+    Node.js
+    Express
+    Prisma
+
+
+L'architettura concettuale potrebbe rimanere simile:
+
+    React
+      |
+      v
+    Express API
+      |
+      v
+    Service
+      |
+      v
+    Prisma
+      |
+      v
+    Database
+
+
+La migrazione dovrebbe mantenere separati:
+
+- presentation layer
+- API layer
+- business logic
+- persistence layer

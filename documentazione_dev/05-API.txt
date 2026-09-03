@@ -1,0 +1,93 @@
+======================================================================
+5  API
+======================================================================
+
+Le API espongono le funzionalità del gestionale tramite richieste HTTP.
+
+Esempi di endpoint:
+
+    /api/tavoli.php
+
+    /api/menu.php
+
+    /api/prenotazioni.php
+
+    /api/ordini.php
+
+    /api/scontrino.php
+
+
+Le funzionalità specifiche vengono selezionate tramite parametri
+come:
+
+    ?type=...
+
+
+Esempio:
+
+    /api/menu.php?type=menu
+
+    /api/ordini.php?type=oggi
+
+    /api/scontrino.php?type=iva
+
+
+======================================================================
+5.1 API GENERICHE JAVASCRIPT
+======================================================================
+
+Le chiamate HTTP vengono centralizzate attraverso funzioni
+riutilizzabili.
+
+L'obiettivo è evitare di duplicare continuamente:
+
+    fetch()
+    gestione URL
+    headers
+    parsing JSON
+    gestione errori
+
+
+I parametri delle richieste vengono gestiti tramite
+URLSearchParams quando appropriato.
+
+
+======================================================================
+5.2 RELAZIONI PRINCIPALI DEL DATABASE
+======================================================================
+
+Le principali entità del sistema comprendono:
+
+    UTENTE
+    TAVOLO
+    PRENOTAZIONE
+    TAVOLO_PRENOTAZIONE
+    MOMENTO_DEL_SERVIZIO
+    PIATTO
+    BEVANDA
+    ALLERGENE
+    ORDINE
+    STATO_ORDINE
+    STATO_CONTO
+    ORDINE_TAVOLO
+    RELAZIONI ORDINE/ITEM
+    DETTAGLIO_ORDINE_CUCINA
+    DETTAGLIO_ORDINE_BAR
+    SCONTRINO_EMESSO
+
+
+Le relazioni permettono di modellare il flusso:
+
+    PRENOTAZIONE
+          |
+        TAVOLO
+          |
+        ORDINE
+       /     \
+    ITEM     STATO
+      |
+    MOMENTO
+      |
+    CONTO
+      |
+    SCONTRINO

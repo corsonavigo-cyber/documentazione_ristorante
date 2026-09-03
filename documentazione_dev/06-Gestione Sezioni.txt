@@ -1,0 +1,142 @@
+======================================================================
+6.1 GESTIONE DEI TAVOLI
+======================================================================
+
+Il sistema permette di:
+
+- visualizzare i tavoli
+- inserire tavoli
+- modificare tavoli
+- eliminare tavoli
+- controllare la disponibilità
+- associare tavoli agli ordini
+- associare tavoli alle prenotazioni
+
+
+Un ordine può essere associato a uno o più tavoli.
+
+
+======================================================================
+6.2 PRENOTAZIONI
+======================================================================
+
+Le prenotazioni permettono di associare:
+
+    prenotazione
+        |
+        +--> data
+        +--> orario
+        +--> numero persone
+        +--> tavoli
+
+
+Le relazioni tra prenotazioni e tavoli vengono gestite
+separatamente.
+
+
+======================================================================
+6.3 MENU
+======================================================================
+
+Il menu gestisce gli elementi disponibili per il servizio.
+
+Gli elementi possono essere:
+
+- piatti
+- bevande
+
+Ogni elemento può avere:
+
+- nome
+- descrizione
+- prezzo
+- IVA
+- categoria
+- disponibilità
+- allergeni
+
+
+Gli allergeni vengono gestiti tramite una relazione dedicata.
+
+
+======================================================================
+6.4 MOMENTI DEL SERVIZIO
+======================================================================
+
+Gli ordini sono organizzati in base al momento del servizio.
+
+Configurazione attuale:
+
+    1 = Antipasto
+    2 = Primo
+    3 = Secondo
+    4 = Dolci
+    5 = Da evadere subito
+
+
+Il momento viene associato alla singola voce della comanda.
+
+Questo permette di modificare l'ordine di evasione senza modificare
+necessariamente l'elemento del menu.
+
+
+======================================================================
+6.5 ORDINI
+======================================================================
+
+L'ordine rappresenta la sessione di servizio associata al tavolo.
+
+Un ordine può contenere:
+
+- numero persone
+- tavoli
+- elementi ordinati
+- momenti del servizio
+- stato
+- conto
+- scontrino
+
+
+Le relazioni principali sono:
+
+    ORDINE
+       |
+       +--> TAVOLI
+       |
+       +--> ITEM
+       |
+       +--> STATO
+       |
+       +--> MOMENTO DEL SERVIZIO
+       |
+       +--> CONTO
+       |
+       +--> SCONTRINO
+
+
+======================================================================
+6.6 COMANDA
+======================================================================
+
+La comanda rappresenta gli elementi ordinati.
+
+Una voce della comanda è identificata logicamente almeno da:
+
+    id_item
+    id_momento
+
+Questo permette di avere lo stesso elemento in momenti differenti.
+
+
+Una voce può inoltre contenere:
+
+    quantità
+    nota
+
+
+Esempio concettuale:
+
+    Pizza Margherita
+    quantità: 2
+    momento: Secondo
+    nota: senza mozzarella

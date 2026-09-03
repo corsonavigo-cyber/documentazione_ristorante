@@ -1,0 +1,30 @@
+======================================================================
+2. TECNOLOGIE UTILIZZATE
+======================================================================
+
+BACKEND
+-------
+
+- PHP
+- PDO
+- MariaDB
+- Composer
+- phpdotenv
+- API HTTP/REST
+
+FRONTEND
+--------
+
+- HTML
+- CSS
+- JavaScript ES Modules
+- Fetch API
+- LocalStorage
+
+DATABASE
+--------
+
+- MariaDB
+- gestione tramite PDO
+- query parametrizzate
+- transazioni per operazioni composte

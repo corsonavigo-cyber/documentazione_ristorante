@@ -1,0 +1,705 @@
+======================================================================
+                    GESTIONALE RISTORANTE
+                  GUIDA ALL'UTILIZZO
+======================================================================
+
+Versione: 1.0
+
+Questa guida spiega come utilizzare il gestionale per la gestione
+quotidiana del ristorante.
+
+La guida è rivolta al personale che utilizza il gestionale e non
+richiede conoscenze informatiche.
+
+
+======================================================================
+1. ACCESSO AL GESTIONALE
+======================================================================
+
+Per utilizzare il gestionale è necessario effettuare l'accesso.
+
+Inserire:
+
+    - nome utente
+    - password
+
+e confermare l'accesso.
+
+Se i dati sono corretti viene visualizzata la schermata principale.
+
+
+----------------------------------------------------------------------
+PROBLEMA: NON RIESCO AD ACCEDERE
+----------------------------------------------------------------------
+
+Controllare:
+
+1. che il nome utente sia corretto;
+2. che la password sia corretta;
+3. che non siano presenti spazi aggiuntivi;
+4. che il sistema sia raggiungibile.
+
+Se il problema continua, contattare il responsabile.
+
+
+======================================================================
+2. SCHERMATA PRINCIPALE
+======================================================================
+
+La schermata principale permette di accedere alle principali
+funzioni del gestionale.
+
+Le sezioni principali riguardano:
+
+    - Tavoli
+    - Ordini
+    - Menu
+    - Prenotazioni
+    - Conti
+    - Scontrini
+    - Storico
+
+
+======================================================================
+3. GESTIONE DEI TAVOLI
+======================================================================
+
+La sezione Tavoli permette di visualizzare la situazione dei tavoli.
+
+Per ogni tavolo è possibile visualizzare il relativo stato.
+
+Lo stato permette di capire rapidamente se un tavolo è:
+
+    - libero
+    - occupato
+    - associato a un ordine
+    - interessato da una prenotazione
+
+
+----------------------------------------------------------------------
+APRIRE UN ORDINE DA UN TAVOLO
+----------------------------------------------------------------------
+
+1. Aprire la sezione Tavoli.
+2. Selezionare il tavolo desiderato.
+3. Creare un nuovo ordine oppure aprire l'ordine esistente.
+4. Inserire il numero di persone.
+5. Procedere con l'inserimento della comanda.
+
+
+----------------------------------------------------------------------
+PROBLEMA: IL TAVOLO RISULTA OCCUPATO
+----------------------------------------------------------------------
+
+Controllare se esiste già un ordine associato al tavolo.
+
+Se l'ordine è ancora aperto, utilizzare l'ordine esistente invece
+di crearne uno nuovo.
+
+
+======================================================================
+4. PRENOTAZIONI
+======================================================================
+
+La sezione Prenotazioni permette di gestire le prenotazioni
+dei clienti.
+
+Una prenotazione può essere associata a uno o più tavoli.
+
+
+----------------------------------------------------------------------
+INSERIRE UNA PRENOTAZIONE
+----------------------------------------------------------------------
+
+Inserire le informazioni richieste:
+
+    - data
+    - orario
+    - numero di persone
+    - tavolo/i
+    - eventuali altre informazioni richieste dal sistema
+
+Confermare la prenotazione.
+
+
+----------------------------------------------------------------------
+VISUALIZZARE UNA PRENOTAZIONE
+----------------------------------------------------------------------
+
+Aprire la sezione Prenotazioni e selezionare la prenotazione
+desiderata.
+
+È possibile verificare il tavolo e le informazioni associate.
+
+
+======================================================================
+5. MENU
+======================================================================
+
+Il menu contiene gli elementi che possono essere ordinati.
+
+Gli elementi possono essere:
+
+    - piatti
+    - bevande
+
+Per ogni elemento possono essere visualizzate informazioni come:
+
+    - nome
+    - descrizione
+    - prezzo
+    - categoria
+    - allergeni
+    - disponibilità
+
+
+======================================================================
+6. CREAZIONE DI UN ORDINE
+======================================================================
+
+Per creare un nuovo ordine:
+
+1. Selezionare un tavolo.
+2. Indicare il numero di persone.
+3. Aprire la schermata dell'ordine.
+4. Selezionare gli elementi desiderati.
+5. Indicare le quantità.
+6. Se necessario, aggiungere una nota.
+7. Selezionare il momento del servizio.
+8. Confermare l'ordine.
+
+
+======================================================================
+7. INSERIMENTO DEGLI ELEMENTI NELLA COMANDA
+======================================================================
+
+Quando si seleziona un piatto o una bevanda, l'elemento viene
+aggiunto alla comanda.
+
+È possibile modificare:
+
+    - quantità
+    - momento del servizio
+    - note
+
+
+----------------------------------------------------------------------
+QUANTITÀ
+----------------------------------------------------------------------
+
+La quantità indica quante unità dello stesso elemento devono
+essere ordinate.
+
+Esempio:
+
+    Pizza Margherita
+    Quantità: 2
+
+
+----------------------------------------------------------------------
+NOTE
+----------------------------------------------------------------------
+
+Le note permettono di comunicare richieste particolari relative
+all'elemento.
+
+Esempi:
+
+    senza cipolla
+    poco sale
+    cottura particolare
+
+
+Utilizzare le note solamente quando necessario e inserirle
+in modo chiaro.
+
+
+======================================================================
+8. MOMENTI DEL SERVIZIO
+======================================================================
+
+Gli elementi della comanda possono essere organizzati in base
+al momento in cui devono essere serviti.
+
+I momenti disponibili sono:
+
+    1. Antipasto
+    2. Primo
+    3. Secondo
+    4. Dolci
+    5. Da evadere subito
+
+
+Esempio:
+
+    Antipasto
+        Bruschetta x 2
+
+    Primo
+        Carbonara x 2
+
+    Secondo
+        Tagliata x 1
+
+    Dolci
+        Tiramisù x 2
+
+
+Utilizzare il momento corretto per facilitare il lavoro
+della cucina e del bar.
+
+
+======================================================================
+9. MODIFICARE UN ORDINE
+======================================================================
+
+È possibile modificare un ordine già inserito.
+
+Le modifiche possono riguardare:
+
+    - quantità
+    - elementi
+    - note
+    - momento del servizio
+
+
+Dopo aver modificato la comanda, confermare le modifiche.
+
+
+----------------------------------------------------------------------
+ATTENZIONE
+----------------------------------------------------------------------
+
+Una modifica alla comanda può comportare una nuova stampa
+per la cucina o per il bar.
+
+Controllare quindi che la modifica inserita sia corretta
+prima di confermarla.
+
+
+======================================================================
+10. VISUALIZZAZIONE DELLA COMANDA
+======================================================================
+
+La comanda mostra gli elementi ordinati organizzati
+per momento del servizio.
+
+Per ogni elemento vengono visualizzati, quando previsti:
+
+    - nome
+    - quantità
+    - nota
+    - momento
+    - prezzo
+
+
+Il totale della comanda viene aggiornato in base agli elementi
+presenti.
+
+
+======================================================================
+11. PRECONTO / PRECOMANDA
+======================================================================
+
+Prima della chiusura del conto è possibile visualizzare
+il riepilogo dell'ordine.
+
+Il riepilogo permette di controllare:
+
+    - elementi ordinati
+    - quantità
+    - prezzi
+    - totale
+
+
+Prima del pagamento verificare sempre che il riepilogo
+corrisponda a quanto effettivamente consumato.
+
+
+======================================================================
+12. SCONTO
+======================================================================
+
+Quando previsto, è possibile applicare uno sconto al totale.
+
+Prima di confermare lo sconto verificare:
+
+    - valore dello sconto
+    - totale finale
+
+Il totale mostrato deve essere controllato prima della chiusura
+del conto.
+
+
+======================================================================
+13. CHIUSURA DEL CONTO
+======================================================================
+
+Per chiudere un conto:
+
+1. Aprire l'ordine.
+2. Controllare gli elementi.
+3. Controllare quantità e prezzi.
+4. Controllare eventuali sconti.
+5. Controllare il totale.
+6. Procedere con il pagamento.
+7. Confermare la chiusura.
+
+
+Dopo la chiusura viene emesso lo scontrino.
+
+
+======================================================================
+14. SCONTRINO
+======================================================================
+
+Lo scontrino contiene il riepilogo della vendita.
+
+Il sistema conserva i dati relativi allo scontrino, inclusi
+i valori utilizzati al momento della vendita.
+
+Questo permette di mantenere corretti i dati storici anche se
+successivamente cambiano i prezzi del menu.
+
+
+======================================================================
+15. STAMPA DELLO SCONTRINO
+======================================================================
+
+Dopo l'emissione dello scontrino viene generata la relativa stampa.
+
+La stampa contiene le informazioni della vendita e il relativo
+riepilogo fiscale.
+
+
+----------------------------------------------------------------------
+PROBLEMA: LO SCONTRINO NON VIENE STAMPATO
+----------------------------------------------------------------------
+
+Controllare:
+
+1. che la vendita sia stata effettivamente conclusa;
+2. che lo scontrino sia presente nello storico;
+3. che la stampante sia accesa;
+4. che la stampante sia collegata;
+5. che il sistema di stampa sia attivo.
+
+Se lo scontrino risulta presente nello storico ma la stampa
+non è disponibile, utilizzare la funzione di ristampa,
+se disponibile.
+
+
+======================================================================
+16. RISTAMPA DI UNO SCONTRINO
+======================================================================
+
+Gli scontrini precedentemente emessi possono essere consultati
+nello storico.
+
+Per visualizzare uno scontrino:
+
+1. Aprire lo Storico.
+2. Cercare lo scontrino desiderato.
+3. Selezionarlo.
+4. Visualizzare il dettaglio.
+5. Utilizzare la funzione di ristampa, quando disponibile.
+
+
+======================================================================
+17. STORICO DEGLI SCONTRINI
+======================================================================
+
+Lo storico permette di consultare gli scontrini precedentemente
+emessi.
+
+Per ogni scontrino è possibile visualizzare informazioni come:
+
+    - numero dello scontrino
+    - ordine associato
+    - data e ora
+    - totale
+    - dettaglio degli elementi
+
+
+Lo storico è utile per:
+
+    - controllare una vendita precedente;
+    - verificare un totale;
+    - visualizzare un dettaglio;
+    - effettuare una ristampa.
+
+
+======================================================================
+18. STORNO
+======================================================================
+
+Lo storno deve essere utilizzato quando è necessario annullare
+una vendita secondo le procedure previste.
+
+Prima di effettuare uno storno verificare attentamente
+lo scontrino interessato.
+
+
+----------------------------------------------------------------------
+ATTENZIONE
+----------------------------------------------------------------------
+
+Uno storno è un'operazione importante.
+
+Non effettuare uno storno se non si è certi dello scontrino
+da annullare.
+
+
+======================================================================
+19. ANNULLAMENTO
+======================================================================
+
+Quando viene effettuato un annullamento, il sistema genera
+una stampa che identifica esplicitamente l'operazione
+come annullata.
+
+
+======================================================================
+20. ALLERGENI
+======================================================================
+
+Gli allergeni associati agli elementi del menu possono essere
+visualizzati nella scheda dell'elemento.
+
+Prima di comunicare informazioni sugli allergeni a un cliente,
+controllare sempre le informazioni presenti nel gestionale
+e seguire le procedure interne del ristorante.
+
+
+======================================================================
+21. PROBLEMI COMUNI
+======================================================================
+
+
+----------------------------------------------------------------------
+IL MENU NON MOSTRA UN ELEMENTO
+----------------------------------------------------------------------
+
+Controllare che l'elemento sia disponibile nel menu.
+
+
+----------------------------------------------------------------------
+NON RIESCO AD AGGIUNGERE UN ELEMENTO
+----------------------------------------------------------------------
+
+Controllare:
+
+    - che l'elemento sia disponibile;
+    - che l'ordine sia ancora modificabile;
+    - che la quantità sia valida.
+
+
+----------------------------------------------------------------------
+LA QUANTITÀ NON È CORRETTA
+----------------------------------------------------------------------
+
+Modificare la quantità direttamente nella voce della comanda
+e verificare il totale aggiornato.
+
+
+----------------------------------------------------------------------
+LA NOTA NON VIENE VISUALIZZATA
+----------------------------------------------------------------------
+
+Controllare che la nota sia stata inserita nella voce corretta
+e che la modifica sia stata confermata.
+
+
+----------------------------------------------------------------------
+IL TOTALE NON CORRISPONDE
+----------------------------------------------------------------------
+
+Controllare nell'ordine:
+
+    - quantità;
+    - elementi presenti;
+    - prezzi;
+    - eventuale sconto.
+
+Se il problema persiste, non procedere con il pagamento
+e contattare il responsabile.
+
+
+----------------------------------------------------------------------
+UN ORDINE NON È PIÙ MODIFICABILE
+----------------------------------------------------------------------
+
+Verificare lo stato dell'ordine.
+
+Alcune operazioni potrebbero non essere disponibili
+dopo la chiusura o il pagamento.
+
+
+----------------------------------------------------------------------
+NON RIESCO A VISUALIZZARE UNO SCONTRINO
+----------------------------------------------------------------------
+
+Controllare lo storico e cercare lo scontrino tramite
+i dati disponibili.
+
+Se lo scontrino risulta presente ma il dettaglio non viene
+visualizzato correttamente, contattare il responsabile.
+
+
+======================================================================
+22. BUONE PRATICHE DI UTILIZZO
+======================================================================
+
+Per evitare errori:
+
+1. Controllare sempre il tavolo prima di aprire un ordine.
+
+2. Controllare il numero di persone.
+
+3. Inserire quantità corrette.
+
+4. Utilizzare le note solamente quando necessarie.
+
+5. Selezionare correttamente il momento del servizio.
+
+6. Controllare la comanda prima di confermarla.
+
+7. Controllare il conto prima del pagamento.
+
+8. Controllare lo scontrino dopo l'emissione.
+
+9. Non effettuare storni senza aver verificato lo scontrino.
+
+10. In caso di errore, non creare un secondo ordine per correggere
+    il problema senza prima verificare lo stato del primo ordine.
+
+
+======================================================================
+23. PROCEDURA RAPIDA: NUOVO CLIENTE
+======================================================================
+
+    1. Seleziona tavolo
+            |
+            v
+    2. Crea ordine
+            |
+            v
+    3. Inserisci numero persone
+            |
+            v
+    4. Inserisci piatti e bevande
+            |
+            v
+    5. Imposta i momenti
+            |
+            v
+    6. Aggiungi eventuali note
+            |
+            v
+    7. Conferma comanda
+            |
+            v
+    8. Servizio
+            |
+            v
+    9. Chiudi conto
+            |
+            v
+    10. Pagamento
+            |
+            v
+    11. Scontrino
+
+
+======================================================================
+24. PROCEDURA RAPIDA: MODIFICA ORDINE
+======================================================================
+
+    1. Apri ordine
+            |
+            v
+    2. Modifica comanda
+            |
+            v
+    3. Controlla quantità
+            |
+            v
+    4. Controlla note
+            |
+            v
+    5. Conferma modifica
+            |
+            v
+    6. Verifica eventuale nuova stampa
+
+
+======================================================================
+25. PROCEDURA RAPIDA: CHIUSURA CONTO
+======================================================================
+
+    1. Apri ordine
+            |
+            v
+    2. Controlla comanda
+            |
+            v
+    3. Controlla totale
+            |
+            v
+    4. Applica eventuale sconto
+            |
+            v
+    5. Controlla totale finale
+            |
+            v
+    6. Effettua pagamento
+            |
+            v
+    7. Emissione scontrino
+            |
+            v
+    8. Verifica stampa
+
+
+======================================================================
+26. QUANDO CONTATTARE IL RESPONSABILE
+======================================================================
+
+Contattare il responsabile quando:
+
+    - non è possibile accedere;
+    - un tavolo risulta occupato erroneamente;
+    - un ordine non può essere modificato;
+    - il totale sembra errato;
+    - uno scontrino non risulta nello storico;
+    - una stampa non viene generata;
+    - è necessario effettuare uno storno;
+    - si verifica un errore ripetuto del sistema.
+
+
+======================================================================
+27. REGOLA GENERALE
+======================================================================
+
+Prima di confermare un'operazione importante verificare sempre
+i dati visualizzati.
+
+In particolare:
+
+    TAVOLO
+    NUMERO PERSONE
+    COMANDA
+    QUANTITÀ
+    NOTE
+    TOTALE
+    SCONTO
+    SCONTRINO
+
+
+Una volta confermata un'operazione, alcune modifiche potrebbero
+richiedere procedure specifiche.
+
+
+======================================================================
+                        FINE GUIDA
+======================================================================
