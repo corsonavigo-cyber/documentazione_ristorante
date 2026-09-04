@@ -59,20 +59,20 @@ function leggiContenuto($file): ?array
     }
 
 function renderContenuto($array_righe):void{
-   
-    //i sottotitolisono riconoscibili da numerazione decimale con punto, es. 1.1, 1.2, 2.1, 2.2 ecc
-    $sottotitoli = preg_grep('/^\d+\.\d+/', $array_righe);
-     //i paragrafi sono riconoscibli da spazio prima senza numerazione, es. "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    $paragrafi= preg_grep('/^\s+/', $array_righe);
-    //deve rstituire la stampa del contenuto in html, con sottotitoli in h2 e paragrafi in p
-    foreach ($array_righe as $riga){
-        if (in_array($riga, $sottotitoli)){
-            echo '<h2><strong>'.$riga.'</strong></h2>';
-        }elseif (in_array($riga, $paragrafi)){
-            echo '<p>'.$riga.'</p>';
-        }else{
-            echo '<p>'.$riga.'</p>';
+    foreach ($array_righe as $riga) {
+        $riga = trim($riga);
+
+        if ($riga === '' || preg_match('/^=+$/', $riga)) {
+            continue;
         }
-    } 
+
+        $rigaHtml = htmlspecialchars($riga, ENT_QUOTES, 'UTF-8');
+
+        if (preg_match('/^\d+\.\s+/', $riga)) {
+            echo '<h2>' . $rigaHtml . '</h2>';
+        } else {
+            echo '<p>' . $rigaHtml . '</p>';
+        }
+    }
 }
 ?>

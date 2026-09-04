@@ -6,6 +6,7 @@
     text-decoration: none;
     color: black;
     
+    
 }
 .menu:hover{
     color: brown;
@@ -20,4 +21,7 @@ body{
 .sezionemenu{
     display:flex;
     flex-direction: column;
+}
+ul{
+    padding: 0 0 0 10px;
 }
