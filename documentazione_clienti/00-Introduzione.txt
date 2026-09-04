@@ -34,7 +34,7 @@ Una volta confermata un'operazione, alcune modifiche potrebbero
 richiedere procedure specifiche.
 
 ======================================================================
-1.2 BUONE PRATICHE DI UTILIZZO
+1.2  BUONE PRATICHE DI UTILIZZO
 ======================================================================
 
 Per evitare errori:
