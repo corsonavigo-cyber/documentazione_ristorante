@@ -1,0 +1,74 @@
+
+======================================================================
+21. PROBLEMI COMUNI
+======================================================================
+
+
+----------------------------------------------------------------------
+PROBLEMA: IL MENU NON MOSTRA UN ELEMENTO
+----------------------------------------------------------------------
+
+Controllare che l'elemento sia disponibile nel menu.
+
+
+----------------------------------------------------------------------
+PROBLEMA: NON RIESCO AD AGGIUNGERE UN ELEMENTO
+----------------------------------------------------------------------
+
+Controllare:
+
+    - che l'elemento sia disponibile;
+    - che l'ordine sia ancora modificabile;
+    - che la quantità sia valida.
+
+
+----------------------------------------------------------------------
+PROBLEMA: LA QUANTITÀ NON È CORRETTA
+----------------------------------------------------------------------
+
+Modificare la quantità direttamente nella voce della comanda
+e verificare il totale aggiornato.
+
+
+----------------------------------------------------------------------
+PROBLEMA: LA NOTA NON VIENE VISUALIZZATA
+----------------------------------------------------------------------
+
+Controllare che la nota sia stata inserita nella voce corretta
+e che la modifica sia stata confermata.
+
+
+----------------------------------------------------------------------
+PROBLEMA: IL TOTALE NON CORRISPONDE
+----------------------------------------------------------------------
+
+Controllare nell'ordine:
+
+    - quantità;
+    - elementi presenti;
+    - prezzi;
+    - eventuale sconto.
+
+Se il problema persiste, non procedere con il pagamento
+e contattare il responsabile.
+
+
+----------------------------------------------------------------------
+PROBLEMA: UN ORDINE NON È PIÙ MODIFICABILE
+----------------------------------------------------------------------
+
+Verificare lo stato dell'ordine.
+
+Alcune operazioni potrebbero non essere disponibili
+dopo la chiusura o il pagamento.
+
+
+----------------------------------------------------------------------
+PROBLEMA: NON RIESCO A VISUALIZZARE UNO SCONTRINO
+----------------------------------------------------------------------
+
+Controllare lo storico e cercare lo scontrino tramite
+i dati disponibili.
+
+Se lo scontrino risulta presente ma il dettaglio non viene
+visualizzato correttamente, contattare il responsabile.

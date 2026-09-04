@@ -5,7 +5,6 @@
 Il flusso generale dell'applicazione è:
 
     FRONTEND
-       |
        | HTTP / Fetch
        v
     API PHP

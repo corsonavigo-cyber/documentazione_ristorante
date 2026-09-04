@@ -14,17 +14,13 @@ verso una seconda versione basata su:
 L'architettura concettuale potrebbe rimanere simile:
 
     React
-      |
-      v
+     
     Express API
-      |
-      v
+     
     Service
-      |
-      v
+    
     Prisma
-      |
-      v
+      
     Database
 
 

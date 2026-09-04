@@ -24,7 +24,9 @@ if ($file !== null && isset($cartelleConsentite[$cartella])) {
 <?php 
 if($contenuto){
     renderContenuto($contenuto);
-} ?> 
+} else { ?>
+    <p>Benvenuto nella documentazione di riferimento del gestionale del ristorante.</p>
+<?php } ?>
    
 </div>
 <?php

@@ -20,8 +20,9 @@ function leggimenu(): void
             }
 
             $url = '?cartella=' . rawurlencode($nomeCartella) . '&file=' . rawurlencode($file);
+            $etichetta = preg_replace('/^\d+\s*-\s*/', '', pathinfo($file, PATHINFO_FILENAME));
             echo '<li class="listamenu"><a class="menu" href="' . htmlspecialchars($url, ENT_QUOTES, 'UTF-8') . '">'
-                . htmlspecialchars(pathinfo($file, PATHINFO_FILENAME), ENT_QUOTES, 'UTF-8')
+                . htmlspecialchars($etichetta, ENT_QUOTES, 'UTF-8')
                 . '</a></li>';
         }
 
@@ -59,19 +60,31 @@ function leggiContenuto($file): ?array
     }
 
 function renderContenuto($array_righe):void{
-    foreach ($array_righe as $riga) {
-        $riga = trim($riga);
-
-        if ($riga === '' || preg_match('/^=+$/', $riga)) {
+    foreach ($array_righe as $rigaOriginale) {
+        if (preg_match('/^\s+v\s*$/i', $rigaOriginale)) {
             continue;
         }
 
-        $rigaHtml = htmlspecialchars($riga, ENT_QUOTES, 'UTF-8');
+        $rigaOriginale = str_replace('|', '↓', $rigaOriginale);
+        $rigaOriginale= str_replace('-->','→',$rigaOriginale);
+        $rigaOriginale= str_replace('+','',$rigaOriginale);
+        $riga = trim($rigaOriginale);
 
-        if (preg_match('/^\d+\.\s+/', $riga)) {
-            echo '<h2>' . $rigaHtml . '</h2>';
-        } else {
-            echo '<p>' . $rigaHtml . '</p>';
+        if ($riga === '' || preg_match('/^=+$/', $riga) || preg_match('/^-+$/', $riga)) {
+            continue;
+        }
+
+        $rigaHtml = htmlspecialchars($rigaOriginale, ENT_QUOTES, 'UTF-8');
+
+        if (preg_match('/^\d+\.\s+[A-ZÀ-Ü0-9][A-ZÀ-Ü0-9\s\'.,:&()\/-]*$/u', $riga)) {
+            echo '<h2 style="white-space: pre-wrap">' . $rigaHtml . '</h2>';
+        } elseif (preg_match('/^PROBLEMA\s*:/i', $riga)) {
+            $titolo = preg_replace('/^(\s*)PROBLEMA\s*:\s*/i', '$1', $rigaOriginale);
+            echo '<h3 style="white-space: pre-wrap">' . htmlspecialchars($titolo, ENT_QUOTES, 'UTF-8') . '</h3>';
+        } elseif (preg_match('/^[^a-zà-öø-ÿ]*[A-ZÀ-ÖØ-Þ][^a-zà-öø-ÿ]*$/u', $riga)) {
+            echo '<h4 style="white-space: pre-wrap">' . $rigaHtml . '</h4>';
+        }else {
+            echo '<p style="white-space: pre-wrap">' . $rigaHtml . '</p>';
         }
     }
 }

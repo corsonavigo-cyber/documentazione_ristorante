@@ -1,0 +1,63 @@
+======================================================================
+23. PROCEDURA RAPIDA: NUOVO CLIENTE
+======================================================================
+
+    1. Seleziona tavolo
+        
+    2. Crea ordine
+      
+    3. Inserisci numero persone
+       
+    4. Inserisci piatti e bevande
+       
+    5. Imposta i momenti
+
+    6. Aggiungi eventuali note
+
+    7. Conferma comanda
+
+    8. Servizio
+
+    9. Chiudi conto
+
+    10. Pagamento
+
+    11. Scontrino
+
+
+======================================================================
+24. PROCEDURA RAPIDA: MODIFICA ORDINE
+======================================================================
+
+    1. Apri ordine
+          
+    2. Modifica comanda
+    
+    3. Controlla quantità
+    
+    4. Controlla note
+ 
+    5. Conferma modifica
+   
+    6. Verifica eventuale nuova stampa
+
+
+======================================================================
+25. PROCEDURA RAPIDA: CHIUSURA CONTO
+======================================================================
+
+    1. Apri ordine
+     
+    2. Controlla comanda
+        
+    3. Controlla totale
+         
+    4. Applica eventuale sconto
+        
+    5. Controlla totale finale
+         
+    6. Effettua pagamento
+            
+    7. Emissione scontrino
+            
+    8. Verifica stampa
