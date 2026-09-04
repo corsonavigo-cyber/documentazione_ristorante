@@ -78,16 +78,11 @@ Le principali entità del sistema comprendono:
 
 Le relazioni permettono di modellare il flusso:
 
-    PRENOTAZIONE
-          |
-        TAVOLO
-          |
-        ORDINE
-       /     \
-    ITEM     STATO
-      |
-    MOMENTO
-      |
-    CONTO
-      |
-    SCONTRINO
+PRENOTAZIONE
+└── TAVOLO
+    └── ORDINE
+        ├── ITEM
+        │      └── MOMENTO
+        │                 └── CONTO
+        │                         └── SCONTRINO
+        └── STATO

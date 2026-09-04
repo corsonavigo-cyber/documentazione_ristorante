@@ -85,15 +85,15 @@ function renderContenuto($array_righe):void{
 
         if (preg_match('/^\d+\.\s+[A-ZÀ-Ü0-9][A-ZÀ-Ü0-9\s\'.,:&()\/-]*$/u', $riga)) {
             $titolo = preg_replace('/^\d+\.\s*/', '', $riga);
-            echo '<h2>' . htmlspecialchars($titolo, ENT_QUOTES, 'UTF-8') . '</h2>';
+            echo '<h2 style="white-space: pre-wrap">' . htmlspecialchars($titolo, ENT_QUOTES, 'UTF-8') . '</h2>';
         } elseif (preg_match('/^\d+\.\d+\s+[A-ZÀ-Ü0-9][A-ZÀ-Ü0-9\s\'.,:&()\/-]*$/u', $riga)) {
             $titolo = preg_replace('/^\d+\.\d+\s*/', '', $riga);
-            echo '<h3>' . htmlspecialchars($titolo, ENT_QUOTES, 'UTF-8') . '</h3>';
+            echo '<h3 style="white-space: pre-wrap">' . htmlspecialchars($titolo, ENT_QUOTES, 'UTF-8') . '</h3>';
         } elseif (preg_match('/^PROBLEMA\s*:/i', $riga)) {
             $titolo = preg_replace('/^PROBLEMA\s*:\s*/i', '', $riga);
-            echo '<h3>' . htmlspecialchars($titolo, ENT_QUOTES, 'UTF-8') . '</h3>';
+            echo '<h3 style="white-space: pre-wrap">' . htmlspecialchars($titolo, ENT_QUOTES, 'UTF-8') . '</h3>';
         } elseif (preg_match('/^[^a-zà-öø-ÿ]*[A-ZÀ-ÖØ-Þ][^a-zà-öø-ÿ]*$/u', $riga)) {
-            echo '<h4>' . htmlspecialchars($riga, ENT_QUOTES, 'UTF-8') . '</h4>';
+            echo '<h4 style="white-space: pre-wrap">' . $rigaHtml . '</h4>';
         }else {
             echo '<p style="white-space: pre-wrap">' . $rigaHtml . '</p>';
         }

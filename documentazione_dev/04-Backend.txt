@@ -61,11 +61,7 @@ Esempio:
 
     aggiornamento di una comanda
 
-        |
-        +--> aggiornamento ordine
-        |
-        +--> eliminazione vecchie relazioni
-        |
-        +--> inserimento nuove relazioni
-        |
-        +--> commit
+        ├── aggiornamento ordine
+        ├── eliminazione vecchie relazioni
+        ├── inserimento nuove relazioni
+        └── commit

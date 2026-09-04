@@ -23,11 +23,10 @@ Un ordine può essere associato a uno o più tavoli.
 Le prenotazioni permettono di associare:
 
     prenotazione
-        |
-        +--> data
-        +--> orario
-        +--> numero persone
-        +--> tavoli
+        ├── data
+        ├── orario
+        ├── numero persone
+        └── tavoli
 
 
 Le relazioni tra prenotazioni e tavoli vengono gestite
@@ -100,18 +99,12 @@ Un ordine può contenere:
 Le relazioni principali sono:
 
     ORDINE
-       |
-       +--> TAVOLI
-       |
-       +--> ITEM
-       |
-       +--> STATO
-       |
-       +--> MOMENTO DEL SERVIZIO
-       |
-       +--> CONTO
-       |
-       +--> SCONTRINO
+        ├── TAVOLI
+        ├── ITEM
+        ├── STATO
+        ├── MOMENTO DEL SERVIZIO
+        ├── CONTO
+        └── SCONTRINO
 
 
 ======================================================================
