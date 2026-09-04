@@ -2,6 +2,9 @@
 
 function leggimenu(): void
 {
+    $cartellaSelezionata = $_GET['cartella'] ?? null;
+    $fileSelezionato = $_GET['file'] ?? null;
+
     $cartelle = [
         'clienti' => dirname(__DIR__) . '/documentazione_clienti',
         'sviluppatori' => dirname(__DIR__) . '/documentazione_dev',
@@ -21,7 +24,11 @@ function leggimenu(): void
 
             $url = '?cartella=' . rawurlencode($nomeCartella) . '&file=' . rawurlencode($file);
             $etichetta = preg_replace('/^\d+\s*-\s*/', '', pathinfo($file, PATHINFO_FILENAME));
-            echo '<li class="listamenu"><a class="menu" href="' . htmlspecialchars($url, ENT_QUOTES, 'UTF-8') . '">'
+            $attiva = $cartellaSelezionata === $nomeCartella && $fileSelezionato === $file;
+            $classe = $attiva ? 'menu menu-attivo' : 'menu';
+            $ariaCurrent = $attiva ? ' aria-current="page"' : '';
+
+            echo '<li class="listamenu"><a class="' . $classe . '" href="' . htmlspecialchars($url, ENT_QUOTES, 'UTF-8') . '"' . $ariaCurrent . '>'
                 . htmlspecialchars($etichetta, ENT_QUOTES, 'UTF-8')
                 . '</a></li>';
         }
@@ -77,12 +84,16 @@ function renderContenuto($array_righe):void{
         $rigaHtml = htmlspecialchars($rigaOriginale, ENT_QUOTES, 'UTF-8');
 
         if (preg_match('/^\d+\.\s+[A-ZÀ-Ü0-9][A-ZÀ-Ü0-9\s\'.,:&()\/-]*$/u', $riga)) {
-            echo '<h2 style="white-space: pre-wrap">' . $rigaHtml . '</h2>';
+            $titolo = preg_replace('/^\d+\.\s*/', '', $riga);
+            echo '<h2>' . htmlspecialchars($titolo, ENT_QUOTES, 'UTF-8') . '</h2>';
+        } elseif (preg_match('/^\d+\.\d+\s+[A-ZÀ-Ü0-9][A-ZÀ-Ü0-9\s\'.,:&()\/-]*$/u', $riga)) {
+            $titolo = preg_replace('/^\d+\.\d+\s*/', '', $riga);
+            echo '<h3>' . htmlspecialchars($titolo, ENT_QUOTES, 'UTF-8') . '</h3>';
         } elseif (preg_match('/^PROBLEMA\s*:/i', $riga)) {
-            $titolo = preg_replace('/^(\s*)PROBLEMA\s*:\s*/i', '$1', $rigaOriginale);
-            echo '<h3 style="white-space: pre-wrap">' . htmlspecialchars($titolo, ENT_QUOTES, 'UTF-8') . '</h3>';
+            $titolo = preg_replace('/^PROBLEMA\s*:\s*/i', '', $riga);
+            echo '<h3>' . htmlspecialchars($titolo, ENT_QUOTES, 'UTF-8') . '</h3>';
         } elseif (preg_match('/^[^a-zà-öø-ÿ]*[A-ZÀ-ÖØ-Þ][^a-zà-öø-ÿ]*$/u', $riga)) {
-            echo '<h4 style="white-space: pre-wrap">' . $rigaHtml . '</h4>';
+            echo '<h4>' . htmlspecialchars($riga, ENT_QUOTES, 'UTF-8') . '</h4>';
         }else {
             echo '<p style="white-space: pre-wrap">' . $rigaHtml . '</p>';
         }

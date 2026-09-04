@@ -1,6 +1,6 @@
 ======================================================================
-                    GESTIONALE RISTORANTE
-                  GUIDA ALL'UTILIZZO
+                   0. GESTIONALE RISTORANTE
+                   0.1 GUIDA ALL'UTILIZZO
 ======================================================================
 
 Versione: 1.0

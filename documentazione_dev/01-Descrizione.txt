@@ -1,6 +1,6 @@
 ======================================================================
-                 GESTIONALE RISTORANTE
-                 DOCUMENTAZIONE TECNICA
+                0. GESTIONALE RISTORANTE
+                0.1 DOCUMENTAZIONE TECNICA
 ======================================================================
 
 Versione: 1.0
