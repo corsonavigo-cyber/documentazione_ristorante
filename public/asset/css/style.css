@@ -1,0 +1,23 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+.menu, .sezionemenu{
+    text-decoration: none;
+    color: black;
+    
+}
+.menu:hover{
+    color: brown;
+    font-weight: bold;
+}
+.listamenu{
+    list-style: none;
+}
+body{
+    display: flex;
+}
+.sezionemenu{
+    display:flex;
+    flex-direction: column;
+}
