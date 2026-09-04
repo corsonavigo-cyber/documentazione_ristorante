@@ -167,6 +167,125 @@ h4 {
     margin: 0.75rem 0;
 }
 
+.home-content {
+    padding: clamp(2rem, 5vw, 4.5rem);
+    max-width: 1080px;
+}
+
+.home-content h1,
+.home-content h2,
+.home-content h3,
+.home-content p {
+    max-width: none;
+}
+
+.home-intro {
+    border: 1px solid var(--line);
+    border-radius: 0 18px 18px 0;
+    background: linear-gradient(135deg, var(--highlight), #f8fbfa 70%);
+}
+
+.eyebrow {
+    margin: 0 0 0.75rem;
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.home-intro h1 {
+    max-width: 20ch;
+    margin: 0;
+    color: var(--accent-dark);
+    font-family: Georgia, serif;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 0.98;
+}
+
+.home-intro .home-lead {
+    max-width: 42ch;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--accent-dark);
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+}
+
+.home-purpose {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 1.5rem;
+    margin: clamp(3rem, 7vw, 6rem) 0;
+}
+
+.section-marker,
+.feature-number {
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.home-purpose h2,
+.section-heading h2,
+.home-closing h2 {
+    margin: 0 0 1rem;
+    padding: 0;
+    border: 0;
+    font-family: Georgia, serif;
+    font-size: clamp(1.7rem, 3vw, 2.5rem);
+}
+
+.home-purpose p {
+    max-width: 68ch;
+}
+
+.section-heading {
+    margin-bottom: 1.5rem;
+}
+
+.section-heading .eyebrow {
+    margin-bottom: 0.35rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    border: 1px solid var(--line);
+    background: var(--line);
+}
+
+.feature-item {
+    min-height: 150px;
+    padding: 1.25rem 1.4rem;
+    background: var(--surface);
+}
+
+.feature-item h3 {
+    margin: 0.7rem 0 0.25rem;
+    color: var(--ink);
+    font-size: 1.05rem;
+}
+
+.feature-item p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+.home-closing {
+    margin-top: clamp(3rem, 7vw, 6rem);
+    padding: clamp(2rem, 5vw, 3.5rem);
+    border-top: 4px solid var(--accent);
+    background: var(--panel);
+}
+
+.home-closing p:last-child {
+    max-width: 60ch;
+    margin-bottom: 0;
+}
+
 footer {
     grid-column: 1 / -1;
     grid-row: 2;
@@ -226,6 +345,14 @@ footer p {
     .container {
         width: auto;
         padding: 2rem 1rem;
+    }
+
+    .home-intro {
+        border-radius: 0 12px 12px 0;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
     }
 
     footer {

@@ -11,14 +11,28 @@ function leggimenu(): void
     ];
 
     foreach ($cartelle as $nomeCartella => $percorso) {
-        if (!is_dir($percorso)) {
+        $percorsoReale = realpath($percorso);
+
+        if ($percorsoReale === false || !is_dir($percorsoReale)) {
             continue;
         }
 
         echo '<li class="sezionemenu"><strong>' . htmlspecialchars(ucfirst($nomeCartella), ENT_QUOTES, 'UTF-8') . '</strong><ul>';
 
         foreach (scandir($percorso) ?: [] as $file) {
-            if ($file === '.' || $file === '..' || !is_file($percorso . '/' . $file)) {
+            if ($file === '.' || $file === '..' || !preg_match('/\.txt$/i', $file)) {
+                continue;
+            }
+
+            $percorsoFile = realpath($percorsoReale . DIRECTORY_SEPARATOR . $file);
+            $prefissoConsentito = $percorsoReale . DIRECTORY_SEPARATOR;
+
+            // Esclude file non regolari e symlink che puntano fuori dalla cartella.
+            if (
+                $percorsoFile === false
+                || !is_file($percorsoFile)
+                || strncmp($percorsoFile, $prefissoConsentito, strlen($prefissoConsentito)) !== 0
+            ) {
                 continue;
             }
 
@@ -43,7 +57,7 @@ function leggiContenuto($file): ?array
     {
         try{
             if (!file_exists($file)) {
-                throw new \RuntimeException('documentazione non trocvata');
+                throw new \RuntimeException('Documentazione non trovata');
             }
 
             $handle = fopen($file, 'r');
@@ -59,8 +73,15 @@ function leggiContenuto($file): ?array
                 explode("\n", $contenuto),
                 fn(string $riga): bool => trim($riga) !== ''
             ));
-            }catch (\Throwable $e){
-                echo "errore nel recupero del contenuto";
+            } catch (\Throwable $e) {
+                // Il dettaglio resta nei log del server e non viene esposto al visitatore.
+                error_log(sprintf(
+                    'Errore lettura documentazione (%s): %s',
+                    $file,
+                    $e->getMessage()
+                ));
+
+                echo 'Impossibile recuperare il contenuto richiesto.';
                 return [];
             }
 
