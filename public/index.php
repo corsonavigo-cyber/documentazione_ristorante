@@ -4,8 +4,8 @@ require_once __DIR__ . '/head.php';
 $file = $_GET['file'] ?? null;
 $cartella = $_GET['cartella'] ?? null;
 $cartelleConsentite = [
-    'clienti' => dirname(__DIR__) . '/documentazione_clienti',
-    'sviluppatori' => dirname(__DIR__) . '/documentazione_dev',
+    'clienti' => dirname(__DIR__) . '/asset/documentazione/documentazione_clienti',
+    'sviluppatori' => dirname(__DIR__) . '/asset/documentazione/documentazione_dev',
 ];
 
 $contenuto = [];

@@ -6,8 +6,8 @@ function leggimenu(): void
     $fileSelezionato = $_GET['file'] ?? null;
 
     $cartelle = [
-        'clienti' => dirname(__DIR__) . '/documentazione_clienti',
-        'sviluppatori' => dirname(__DIR__) . '/documentazione_dev',
+        'clienti' => __DIR__. '/asset/documentazione/documentazione_clienti',
+        'sviluppatori' => __DIR__. '/asset/documentazione/documentazione_dev',
     ];
 
     foreach ($cartelle as $nomeCartella => $percorso) {
