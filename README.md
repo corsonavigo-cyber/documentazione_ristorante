@@ -18,9 +18,6 @@ Il portale consente di selezionare i documenti dal menu e visualizzarne il conte
 - CSS3
 - File di testo `.txt` per la documentazione
 
-## Link al progetto
-
-[https://documentazioneprogettostage.netsons.org](INSERIRE_LINK_PROGETTO)
 
 
 ## Struttura principale
